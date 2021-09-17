@@ -1,0 +1,129 @@
+/* 변수선언 */
+:root {
+  --font-large: 25px;
+  --font-medium: 20px;
+  --font-small: 15px;
+  --font-mini: 10px;
+  --padding-default: 25px;
+
+  --color-white: #fdfcf6;
+  --color-dark: #082111;
+}
+/* 전체 컨트롤 */
+body {
+  margin: 0;
+  padding-right: 22%;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: #fdfcf6;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 30vw;
+  border-radius: 100px;
+  padding: var(--padding-default);
+}
+/* header 부분 */
+header {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-dark);
+  height: auto;
+  width: 100%;
+  height: 15vh;
+  font-size: var(--font-large);
+  align-items: center;
+}
+.header__bar {
+  display: flex;
+  padding: var(--padding-default);
+}
+.header__nav {
+  display: flex;
+  padding: var(--padding-default);
+}
+.header__nav li {
+  padding: 20px;
+}
+/* nav 부분 */
+nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 22%;
+  height: 100vh;
+  background-image: url("img/nav2.JPG");
+  background-size: 100% 85vh;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+.nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+  background-color: var(--color-white);
+  margin: 0;
+}
+.nav__bar__search {
+  width: 70%;
+  height: 6vh;
+  border: 3px solid black;
+}
+.nav__bar button {
+  width: 4vw;
+  height: 6vh;
+}
+/* section 부분 */
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+  padding: var(--padding-default);
+}
+.section__info {
+  width: 100%;
+}
+.section__info > * {
+  width: 80%;
+  height: 20vh;
+  background-color: var(--color-white);
+  padding: var(--padding-default);
+}
+.section__image {
+  width: 100%;
+  text-align: center;
+}
+/* footer 부분 */
+.section__board {
+  width: 100%;
+  height: 50px;
+}
+/* image slider */
+.image__container {
+  border: 1px solid black;
+  width: 80vw;
+}
+.image__slider {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
