@@ -51,7 +51,9 @@ header {
   padding: var(--padding-default);
 }
 .header__nav li {
+  color: var(--color-white);
   padding: 20px;
+  cursor: pointer;
 }
 /* nav 부분 */
 nav {
@@ -71,19 +73,25 @@ nav {
   justify-content: center;
   width: 100%;
   height: 15vh;
-  background-color: var(--color-white);
+  background-color: var(--color-dark);
   margin: 0;
 }
 .nav__bar__search {
   width: 70%;
   height: 6vh;
-  border: 3px solid black;
+  font-size: var(--font-medium);
+  background-color: wheat;
 }
 .nav__bar button {
   width: 4vw;
   height: 6vh;
 }
 /* section 부분 */
+.up__button {
+  position: fixed;
+  bottom: 5%;
+  left: 70%;
+}
 section {
   display: flex;
   align-items: center;
@@ -102,17 +110,17 @@ section {
   background-color: var(--color-white);
   padding: var(--padding-default);
 }
+/* image slider */
 .section__image {
   width: 100%;
   text-align: center;
 }
-/* footer 부분 */
 .section__board {
   width: 100%;
   height: 50px;
 }
-/* image slider */
 .image__container {
+  position: relative;
   border: 1px solid black;
   width: 80vw;
 }
@@ -121,6 +129,10 @@ section {
   display: flex;
   overflow: hidden;
 }
+.image__slider li {
+  transform: translate(-400px, 0%);
+}
+/* footer 부분 */
 .footer {
   position: absolute;
   width: 100%;

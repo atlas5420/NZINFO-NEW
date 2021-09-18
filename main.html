@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    
     <script src="https://kit.fontawesome.com/c881cbaaf3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
@@ -16,17 +17,20 @@
             <span class="header__bar"><i class="fas fa-kiwi-bird"></i>&nbsp;NZ-INFO</span>
         </a>
         <ul class="header__nav">
-            <a href="#"><li>INFO</li></a>
-            <a href="#"><li>image</li></a>
-            <a href="#"><li>board</li></a>
+            <li>INFO</li>
+            <li>image</li>
+            <li>board</li>
         </ul>
     </header>
     <nav>
         <div class="nav__bar">
-            <input type="search" class="nav__bar__search" placeholder="검색">
+            <input class="nav__bar__search" type="search" placeholder="검색">
             <button><span class="material-icons">search</span></button>
         </div>
     </nav>
+    <div class="up__button">
+        <button><span class="material-icons">expand_less</span></button>
+    </div>
     <section class="section__info">
         <div class="visa">
             <p>비자</p>
@@ -51,6 +55,8 @@
                 <li class="images"><img src="img/2.JPG" alt="error"></li>
                 <li class="images"><img src="img/3.JPG" alt="error"></li>
             </ul>
+            <button class="image__left">버튼1</button>
+            <button class="image__right">버튼2</button>
         </div>
     </section>
     <section class="section__board">
@@ -62,5 +68,8 @@
     <footer class="footer">
         <p>footer copyright</p>
     </footer>
+
+    <script src="headerNav.js"></script>
+    <script src="imageSlider.js"></script>
 </body>
 </html>
