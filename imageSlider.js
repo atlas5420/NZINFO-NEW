@@ -1,26 +1,31 @@
-const slider = document.querySelector(".image__slider");
-const images = document.querySelectorAll(".image__slider li");
-console.log(images.length);
-let currentIdx = 0;
-let slideCount = images.length;
-const prev = document.querySelector(".image__left");
-const next = document.querySelector(".image__right");
+const images = document.querySelector(".image__slider");
+const prevBtn = document.querySelector(".image__left");
+const nextBtn = document.querySelector(".image__right");
 
-slideWidth = 300;
-slidemargin = 100;
-slider.style.width = (slideWidth + slidemargin)*slideCount + "px";
+let imageIndex = 0;
+let postion = 0;
+const IMAGE_WIDTH = 400;
 
-function move(num){
-    slider.style.trasnform ="translate("+ (-num * 400) +"px)";
-    currentIdx =num;
+function moveleft(){
+  if(imageIndex > 0){
+    postion += IMAGE_WIDTH;
+    images.style.transform = `translateX(${postion}px)`;
+    imageIndex = imageIndex - 1;
+  }
+
 }
-prev.addEventListener("click", function(){
-    if(currentIdx !== 0){
-        move(currentIdx-1);
-    }
-});
-next.addEventListener("click", function(){
-    if(currentIdx !== slideCount -1){
-        move(currentIdx +1);
-    }
-});
+
+function moveright(){
+  if(imageIndex <3)
+  postion -= IMAGE_WIDTH;
+    images.style.transform = `translateX(${postion}px)`;
+    imageIndex = imageIndex + 1;
+
+}
+   
+  function init(){
+    prevBtn.addEventListener("click", moveleft);
+    nextBtn.addEventListener("click", moveright);
+  }
+   
+  init();
