@@ -64,7 +64,7 @@ nav {
   right: 0;
   width: 22%;
   height: 100%;
-  background-image: url("img/nav2.JPG");
+  background: url("img/nav2.JPG");
   background-size: 100% 85vh;
   background-position-y: bottom;
   background-repeat: no-repeat;
@@ -117,20 +117,32 @@ section {
   text-align: center;
 }
 .image__container {
-  border: 1px solid black;
-  width: 80vw;
+  width: 70vw;
   height: 50vh;
+}
+.image__left {
+  float: left;
+  margin: 22.5vh 4vw;
+}
+.image__right {
+  float: right;
+  margin: 22.5vh 0;
+  margin-left: 4vw;
 }
 .image__slider {
   margin: 0;
+
   position: relative;
+  height: 50vh;
 }
 
 /* min left direction = 0%
    max left direction = 70% */
 .image__slider img {
   position: absolute;
+  margin: 0;
 }
+/* board 부분 */
 .section__board {
   width: 100%;
   height: 50px;
