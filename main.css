@@ -8,6 +8,7 @@
 
   --color-white: #fdfcf6;
   --color-dark: #082111;
+  --section-font: #412d0f;
 }
 /* 전체 컨트롤 */
 body {
@@ -15,19 +16,19 @@ body {
   padding-right: 22%;
   padding-left: 0;
 }
-
 p {
   margin: 0;
 }
 ul {
   list-style: none;
 }
-img {
+.image__slider img {
   width: 30vw;
   height: 40vh;
   border-radius: 100px;
   padding: var(--padding-default);
 }
+
 /* header 부분 */
 header {
   position: static;
@@ -39,6 +40,8 @@ header {
   height: 15vh;
   font-size: var(--font-large);
   align-items: center;
+  animation-name: headerMove;
+  animation-duration: 1s;
 }
 header > a {
   text-decoration: none;
@@ -57,6 +60,7 @@ header > a {
   padding: 20px;
   cursor: pointer;
 }
+
 /* nav 부분 */
 nav {
   position: fixed;
@@ -69,6 +73,7 @@ nav {
   background-position-y: bottom;
   background-repeat: no-repeat;
 }
+
 .nav__bar {
   display: flex;
   align-items: center;
@@ -87,30 +92,64 @@ nav {
   width: 4vw;
   height: 6vh;
 }
-/* section 부분 */
+
+/* 최상단 이동 버튼 */
 .up__button {
   position: fixed;
   bottom: 5%;
-  left: 70%;
+  left: 75%;
 }
+
+/* section 부분 */
 section {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   background-color: var(--color-white);
   padding: var(--padding-default);
+  margin-top: 10vw;
 }
+/* 항목 전체 설정 */
 .section__info {
-  width: 100%;
+  width: 90%;
+  text-align: center;
 }
-.section__info > * {
-  width: 80%;
-  height: 20vh;
-  background-color: var(--color-white);
-  padding: var(--padding-default);
+.section__info div > a {
+  font-size: 30px;
+  color: var(--section-font);
+  text-decoration: none;
 }
+.section__info div > a > img {
+  width: 35vw;
+}
+/* section 포지션 설정 */
+.section__info__visa {
+  margin-left: 50%;
+  width: 50%;
+}
+.section__info__trans {
+  width: 50%;
+  margin-right: 50%;
+}
+.section__info__stay {
+  width: 50%;
+  margin-left: 50%;
+}
+.section__info__mart {
+  width: 50%;
+  margin-right: 50%;
+}
+
+@keyframes sectionMove {
+  from {
+    margin-top: 40vw;
+  }
+  to {
+    margin-top: 0vw;
+  }
+}
+
 /* image slider */
 .section__image {
   width: 90%;
@@ -131,17 +170,14 @@ section {
 }
 .image__slider {
   margin: 0;
-
   position: relative;
   height: 50vh;
 }
-
-/* min left direction = 0%
-   max left direction = 70% */
 .image__slider img {
   position: absolute;
   margin: 0;
 }
+
 /* board 부분 */
 .section__board {
   width: 100%;
@@ -153,8 +189,4 @@ section {
   width: 100%;
   color: var(--color-white);
   background-color: var(--color-dark);
-}
-button:hover {
-  color: blue;
-  transition: ;
 }
